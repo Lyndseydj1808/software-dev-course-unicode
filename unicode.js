@@ -83,18 +83,47 @@ Assign the result to a variable named swappedString.
 
 */
 
+//Exercise 1
+let inputString = "Learn";
+let sumCodePoints = inputString.charCodeAt(0) + inputString.charCodeAt(1);
+
+console.log(sumCodePoints);// 'L' = 76, 'e' = 101, 76 + 101 = 177
+
+//Exercise 2
+let codePoint1 = 72;
+let codePoint2 = 99;
+
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+
+console.log(combinedString);// "Hc" // 72 = 'H', 99 = 'c', combined = "Hc"
+
+//Exercise 3
+let anotherInputString = "Unicorn";
+let index1 = 0
+let index2 = 2
+
+let codePointDifference = Math.abs(anotherInputString.charCodeAt(index1) - anotherInputString.charCodeAt(index2));
+
+console.log(codePointDifference);//20 // 'U' = 85 , 'i' = 105, |85 - 105| = 20
+
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // Your code here
+let thirdCodePoint = inputString1.charCodeAt(2); // Your code here
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let codes = [72, 101, 108, 108];
+let wordFromCodePoints = String.fromCharCode(codes[0]) + String.fromCharCode(codes[1]) + String.fromCharCode(codes[2]) + String.fromCharCode(codes[3]);// Your code here
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let firstCharCode = inputString2.charCodeAt(0);//76
+let lastCharCode = inputString2.charCodeAt(inputString2.length - 1);//104
+
+let slicedWord = inputString2.slice(1,-1);
+
+let swappedString = String.fromCharCode(lastCharCode) + slicedWord + String.fromCharCode(firstCharCode);// Your code here
 
 // Log all results
 console.log({
